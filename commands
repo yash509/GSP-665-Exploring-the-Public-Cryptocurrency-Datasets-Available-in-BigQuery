@@ -1,4 +1,4 @@
-Task - 5.1 : Store the transaction hash of the large mystery transfer of 194993 BTC in the table 51 inside the lab dataset:
+Task - 5.1 :: Store the transaction hash of the large mystery transfer of 194993 BTC in the table 51 inside the lab dataset:
 
 CREATE OR REPLACE TABLE lab.51 (transaction_hash STRING) as
 SELECT transaction_id FROM `bigquery-public-data.bitcoin_blockchain.transactions` , UNNEST( outputs ) as outputs
@@ -9,7 +9,7 @@ where outputs.output_satoshis = 19499300000000
 
 
 
-Task - 5.2 : Store the balance of the pizza purchase address in the table 52 inside the lab dataset:
+Task - 5.2 :: Store the balance of the pizza purchase address in the table 52 inside the lab dataset:
 
 -- SQL source from https://cloud.google.com/blog/product...
 CREATE OR REPLACE TABLE lab.52 (balance NUMERIC) as
